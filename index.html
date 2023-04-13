@@ -90,7 +90,7 @@
                 const prediction = await model.predict(webcam.canvas);
                 detected = false;
                 for (let i = 0; i < maxPredictions; i++) {
-                    if(prediction[i].probability.toFixed(2) * 100 > 97){
+                    if(prediction[i].probability.toFixed(2) * 100 > 96){
                         name = prediction[i].className;
                         label = prediction[i].probability.toFixed(2) * 100 + "%";
                         hide();
