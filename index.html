@@ -19,7 +19,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div id="to read" class="col" style="text-align: right;font-weight: 200;">
+                <div id="to read" class="col">
                 </div>
                 <div class="col">
                     <button class="btn btn-success" id="startS" onclick="init()" style="float: right;color: whitesmoke;">Start Scanning</button>
@@ -105,14 +105,12 @@
                         document.getElementById("description").innerHTML = name.toUpperCase();
                         document.getElementById("description").hidden = false;
                         labelContainer.innerHTML = label;
-                        document.getElementById("to read").innerHTML = "Click to close scan and listen to description";
                     }
                 } else {
                     window.speechSynthesis.cancel();
                     document.getElementById("description").hidden = true;
                     labelContainer.innerHTML = "";
                     document.getElementById("class").hidden = false;
-                    document.getElementById("to read").innerHTML = "";
                 }
                 window.requestAnimationFrame(loop);
             }
