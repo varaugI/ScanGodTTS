@@ -57,6 +57,7 @@
         <script type="text/javascript">
             const URL = "./";
             window.speechSynthesis.cancel();
+	    $("#startS").click(function(){$("#startS").hide()});
             let model, webcam, label, labelContainer, name, maxPredictions,detected;
             detected = false;
             let speech = new SpeechSynthesisUtterance();
