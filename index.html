@@ -23,7 +23,7 @@
                 </div>
                 <div class="col">
                     <button class="btn btn-success" id="startS" onclick="init()" style="float: right;color: whitesmoke;">Start Scanning</button>
-			        <button class="btn btn-danger" id="stopS" onclick="stopWC()" hidden style="float: right;color: whitesmoke;">Stop Scanning</button>
+			        <button class="btn btn-danger" id="stopS" onclick="window.location.reload();" hidden style="float: right;color: whitesmoke;">Stop Scanning</button>
                 </div>
                 <br>
             </div>
@@ -123,18 +123,7 @@
                 document.getElementById("class").hidden = true;
                 document.getElementById("img").hidden = true;
 		    }
-
-            function stopWC(){
-                window.speechSynthesis.cancel();
-                document.getElementById("startS").hidden = false;
-                document.getElementById("stopS").hidden = true;
-                document.getElementById("description").hidden = true;
-                labelContainer.innerHTML = "";
-                document.getElementById("class").hidden = true;
-                webcam.stop();
-                document.getElementById("webcam-container").removeChild(webcam.canvas);
-                document.getElementById("img").hidden = false;
-            }       
+     
         </script>
     </body>
 </html>
